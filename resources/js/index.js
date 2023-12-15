@@ -38,6 +38,13 @@ export default function filamentTimeRangeSlider({ state, min, max, mininterval, 
             this.updateState();
         },
 
+        inputtrigger() {
+            this.maxdate = this.maxhour * 60 + this.maxminute;
+            this.mindate = this.minhour * 60 + this.minminute;
+            this.mintrigger();
+            this.maxtrigger();
+        },
+
         getHourFromDate(date) {
             return String((Math.floor(date / 60))).padStart(2, '0');
         },
@@ -48,8 +55,8 @@ export default function filamentTimeRangeSlider({ state, min, max, mininterval, 
 
         updateState: function () {
             this.state = {
-                mindate: this.mindate,
-                maxdate: this.maxdate
+                mindate: new Date(this.mindate * 60000).toISOString(),
+                maxdate: new Date(this.maxdate * 60000).toISOString()
             };
         },
     }

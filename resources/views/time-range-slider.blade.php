@@ -52,15 +52,15 @@
                             :attributes="\Filament\Support\prepare_inherited_attributes($getExtraAttributeBag())">
                             <div class="flex px-1 py-2.5">
                                 <input max="23" min="0" type="number" inputmode="numeric"
-                                    x-model="minhour"
+                                    x-model="minhour" x-on:change="inputtrigger"
                                     class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
 
                                 <span class="text-sm text-center font-medium text-gray-500 dark:text-gray-400 shrink">
                                     :
                                 </span>
 
-                                <input max="59" min="0" type="number" inputmode="numeric"
-                                    x-model="minminute"
+                                <input max="59" min="0" type="number" step="{{ $getMinutesStep() }}"
+                                    inputmode="numeric" x-model="minminute" x-on:change="inputtrigger"
                                     class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
                             </div>
                         </x-filament::input.wrapper>
@@ -72,15 +72,15 @@
                             :attributes="\Filament\Support\prepare_inherited_attributes($getExtraAttributeBag())">
                             <div class="flex px-1 py-2.5">
                                 <input max="23" min="0" type="number" inputmode="numeric"
-                                    x-model="maxhour"
+                                    x-model="maxhour" x-on:change="inputtrigger"
                                     class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
 
                                 <span class="text-sm text-center font-medium text-gray-500 dark:text-gray-400 shrink">
                                     :
                                 </span>
 
-                                <input max="59" min="0" type="number" inputmode="numeric"
-                                    x-model="maxminute"
+                                <input max="59" min="0" type="number" step="{{ $getMinutesStep() }}"
+                                    inputmode="numeric" x-model="maxminute" x-on:change="inputtrigger"
                                     class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
                             </div>
                         </x-filament::input.wrapper>
