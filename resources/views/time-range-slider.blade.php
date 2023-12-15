@@ -10,15 +10,16 @@
             ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-time-range-slider', 'solution-forest/filament-time-range-slider') }}"
             x-data="filamentTimeRangeSlider({
                 state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$statePath}')") }},
-            })" x-init="mintrigger();
-            maxtrigger()" class="relative max-w-xl w-full mt-3 mb-7">
+                mininterval: {{ $getMinInterval() }},
+                stepinterval: {{ $getMinutesStep() }},
+            })" x-init="init()" class="relative max-w-xl w-full mt-3 mb-7">
             <div>
-                <input type="range" step="100" x-bind:min="min" x-bind:max="max"
-                    x-on:input="mintrigger" x-model="mindate"
+                <input type="range" step="{{ $getMinutesStep() }}" x-bind:min="min"
+                    x-bind:max="max" x-on:input="mintrigger" x-model="mindate"
                     class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
 
-                <input type="range" step="100" x-bind:min="min" x-bind:max="max"
-                    x-on:input="maxtrigger" x-model="maxdate"
+                <input type="range" step="{{ $getMinutesStep() }}" x-bind:min="min"
+                    x-bind:max="max" x-on:input="maxtrigger" x-model="maxdate"
                     class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
 
                 <div class="relative z-10 h-2">
@@ -45,14 +46,53 @@
                 </div>
             @else
                 <div class="pt-5 grid grid-cols-2 gap-3">
-                    <div>
+                    <div class="flex items-center justify-center rtl:flex-row-reverse">
+                        <x-filament::input.wrapper
+                            class="border-gray-300 focus:border-yellow-500 focus:ring-yellow-500 rounded-md shadow-sm w-full max-w-sm border border-gray-200 rounded text-center focus:border-primary-500 focus:ring-primary-500"
+                            :attributes="\Filament\Support\prepare_inherited_attributes($getExtraAttributeBag())">
+                            <div class="flex px-1 py-2.5">
+                                <input max="23" min="0" type="number" inputmode="numeric"
+                                    x-model="minhour"
+                                    class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
+
+                                <span class="text-sm text-center font-medium text-gray-500 dark:text-gray-400 shrink">
+                                    :
+                                </span>
+
+                                <input max="59" min="0" type="number" inputmode="numeric"
+                                    x-model="minminute"
+                                    class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
+                            </div>
+                        </x-filament::input.wrapper>
+                    </div>
+
+                    <div class="flex items-center justify-center rtl:flex-row-reverse">
+                        <x-filament::input.wrapper
+                            class="border-gray-300 focus:border-yellow-500 focus:ring-yellow-500 rounded-md shadow-sm w-full max-w-sm border border-gray-200 rounded text-center focus:border-primary-500 focus:ring-primary-500"
+                            :attributes="\Filament\Support\prepare_inherited_attributes($getExtraAttributeBag())">
+                            <div class="flex px-1 py-2.5">
+                                <input max="23" min="0" type="number" inputmode="numeric"
+                                    x-model="maxhour"
+                                    class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
+
+                                <span class="text-sm text-center font-medium text-gray-500 dark:text-gray-400 shrink">
+                                    :
+                                </span>
+
+                                <input max="59" min="0" type="number" inputmode="numeric"
+                                    x-model="maxminute"
+                                    class="time-component text-center !appearance-none w-10 border-none bg-transparent p-0 text-center text-sm text-gray-950 focus:ring-0 dark:text-white" />
+                            </div>
+                        </x-filament::input.wrapper>
+                    </div>
+                    {{-- <div>
                         <x-input type="text" maxlength="5" x-on:change="mintrigger" x-model="mindate"
                             class="w-full max-w-sm border border-gray-200 rounded text-center focus:border-primary-500 focus:ring-primary-500" />
-                    </div>
-                    <div>
+                    </div> --}}
+                    {{-- <div>
                         <x-input type="text" maxlength="5" x-on:change="maxtrigger" x-model="maxdate"
                             class="w-full max-w-sm border border-gray-200 rounded text-center focus:border-primary-500 focus:ring-primary-500" />
-                    </div>
+                    </div> --}}
                 </div>
             @endif
         </div>

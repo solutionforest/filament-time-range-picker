@@ -46,4 +46,4 @@ easymde/dist/easymde.min.css:
    * @link https://github.com/ionaru/easy-markdown-editor
    * @license MIT
    *)
-*/input[type=range]::-webkit-slider-thumb{pointer-events:all;width:20px;height:20px;-webkit-appearance:none}
+*/input[type=range]::-webkit-slider-thumb{pointer-events:all;width:20px;height:20px;-webkit-appearance:none}.time-component::-webkit-inner-spin-button,.time-component::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}

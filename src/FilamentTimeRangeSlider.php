@@ -27,24 +27,24 @@ class FilamentTimeRangeSlider extends Field implements HasAffixActions
 
     public bool $disableInput = false;
 
-    protected int | Closure | null $hoursStep = null;
-
     protected int | Closure | null $minutesStep = null;
+
+    protected int | Closure | null $minInterval = null;
 
     protected CarbonInterface | string | Closure | null $maxTime = null;
 
     protected CarbonInterface | string | Closure | null $minTime = null;
 
-    public function hoursStep(int | Closure | null $hoursStep): static
+    public function minutesStep(int | Closure | null $minutesStep): static
     {
-        $this->hoursStep = $hoursStep;
+        $this->minutesStep = $minutesStep;
 
         return $this;
     }
 
-    public function minutesStep(int | Closure | null $minutesStep): static
+    public function minInterval(int | Closure | null $minInterval): static
     {
-        $this->minutesStep = $minutesStep;
+        $this->minInterval = $minInterval;
 
         return $this;
     }
@@ -67,6 +67,18 @@ class FilamentTimeRangeSlider extends Field implements HasAffixActions
     {
         return $this->disableInput;
     }
+
+    public function getMinutesStep(): int
+    {
+        return $this->evaluate($this->minutesStep) ?? 30;
+    }
+
+    public function getMinInterval(): int
+    {
+        return $this->evaluate($this->minInterval) ?? 60;
+    }
+
+
 
     public function getDisplayFormat(): string
     {

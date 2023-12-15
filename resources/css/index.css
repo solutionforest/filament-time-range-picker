@@ -6,3 +6,9 @@ input[type=range]::-webkit-slider-thumb {
     height: 20px;
     -webkit-appearance: none;
 }
+
+.time-component::-webkit-outer-spin-button,
+.time-component::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
