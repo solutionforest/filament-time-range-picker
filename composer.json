@@ -1,0 +1,72 @@
+{
+    "name": "solution-forest/filament-time-range-slider",
+    "description": "This is my package filament-time-range-slider",
+    "keywords": [
+        "solutionforest",
+        "laravel",
+        "filament-time-range-slider"
+    ],
+    "homepage": "https://github.com/solutionforest/filament-time-range-slider",
+    "support": {
+        "issues": "https://github.com/solutionforest/filament-time-range-slider/issues",
+        "source": "https://github.com/solutionforest/filament-time-range-slider"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kelseylee",
+            "email": "kelsey.lee@solutionforest.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/forms": "^3.0",
+        "spatie/laravel-package-tools": "^1.15.0",
+        "illuminate/contracts": "^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.9",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SolutionForest\\FilamentTimeRangeSlider\\": "src/",
+            "SolutionForest\\FilamentTimeRangeSlider\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SolutionForest\\FilamentTimeRangeSlider\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SolutionForest\\FilamentTimeRangeSlider\\FilamentTimeRangeSliderServiceProvider"
+            ],
+            "aliases": {
+                "FilamentTimeRangeSlider": "SolutionForest\\FilamentTimeRangeSlider\\Facades\\FilamentTimeRangeSlider"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

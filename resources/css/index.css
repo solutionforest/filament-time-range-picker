@@ -1,0 +1,8 @@
+@import '../../vendor/filament/forms/dist/index.css';
+
+input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+}
