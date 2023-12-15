@@ -63,6 +63,11 @@ class FilamentTimeRangeSlider extends Field implements HasAffixActions
         return $this;
     }
 
+    public function ifDisableInput(): bool
+    {
+        return $this->disableInput;
+    }
+
     public function getDisplayFormat(): string
     {
         $format = $this->evaluate($this->displayFormat);
