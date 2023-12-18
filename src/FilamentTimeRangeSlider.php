@@ -21,9 +21,9 @@ class FilamentTimeRangeSlider extends Field implements HasAffixActions
     protected string $view = 'filament-time-range-slider::time-range-slider';
 
 
-    protected string | Closure | null $displayFormat = null;
+    // protected string | Closure | null $displayFormat = null;
 
-    public static string $defaultTimeDisplayFormat = 'H:i';
+    // public static string $defaultTimeDisplayFormat = 'H:i';
 
     public bool $disableInput = false;
 
@@ -49,12 +49,12 @@ class FilamentTimeRangeSlider extends Field implements HasAffixActions
         return $this;
     }
 
-    public function displayFormat(string | Closure | null $format): static
-    {
-        $this->displayFormat = $format;
+    // public function displayFormat(string | Closure | null $format): static
+    // {
+    //     $this->displayFormat = $format;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function disableInput(bool $disableInput = true): static
     {
@@ -78,16 +78,14 @@ class FilamentTimeRangeSlider extends Field implements HasAffixActions
         return $this->evaluate($this->minInterval) ?? 60;
     }
 
+    // public function getDisplayFormat(): string
+    // {
+    //     $format = $this->evaluate($this->displayFormat);
 
+    //     if ($format) {
+    //         return $format;
+    //     }
 
-    public function getDisplayFormat(): string
-    {
-        $format = $this->evaluate($this->displayFormat);
-
-        if ($format) {
-            return $format;
-        }
-
-        return static::$defaultTimeDisplayFormat;
-    }
+    //     return static::$defaultTimeDisplayFormat;
+    // }
 }

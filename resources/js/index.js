@@ -55,8 +55,8 @@ export default function filamentTimeRangeSlider({ state, min, max, mininterval, 
 
         updateState: function () {
             this.state = {
-                mindate: new Date(this.mindate * 60000).toISOString(),
-                maxdate: new Date(this.maxdate * 60000).toISOString()
+                mindate: this.minhour + ':' + this.minminute,
+                maxdate: this.maxhour + ':' + this.maxminute
             };
         },
     }

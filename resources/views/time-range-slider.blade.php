@@ -4,7 +4,7 @@
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
 
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center time-range-slider-container">
         <div wire:ignore ax-load x-ignore
             ax-load-css="{{ \Filament\Support\Facades\FilamentAsset::getStyleHref('filament-time-range-slider-styles', 'solution-forest/filament-time-range-slider') }}"
             ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-time-range-slider', 'solution-forest/filament-time-range-slider') }}"
@@ -41,8 +41,16 @@
 
             @if ($ifDisableInput())
                 <div class="pt-5 grid grid-cols-2 gap-3 date-label-container">
-                    <div x-text="mindate" class="text-left min-date-label"></div>
-                    <div x-text="maxdate" class="text-right max-date-label"></div>
+                    <div class="text-left min-date-label">
+                        <label x-text="minhour" class="hour-label"></label>
+                        <label class="seperator-label">:</label>
+                        <label x-text="minminute" class="minute-label"></label>
+                    </div>
+                    <div class="text-right max-date-label">
+                        <label x-text="maxhour" class="hour-label"></label>
+                        <label class="seperator-label">:</label>
+                        <label x-text="maxminute" class="minute-label"></label>
+                    </div>
                 </div>
             @else
                 <div class="pt-5 grid grid-cols-2 gap-3">
