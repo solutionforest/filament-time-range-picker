@@ -1,6 +1,6 @@
 <?php
 
-// config for SolutionForest/FilamentTimeRangeSlider
+// config for SolutionForest/TimeRangeSlider
 return [
 
 ];

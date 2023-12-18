@@ -1,10 +1,10 @@
 {
     "name": "solution-forest/filament-time-range-slider",
-    "description": "This is my package filament-time-range-slider",
+    "description": "This is my package time-range-slider",
     "keywords": [
         "solutionforest",
         "laravel",
-        "filament-time-range-slider"
+        "time-range-slider"
     ],
     "homepage": "https://github.com/solutionforest/filament-time-range-slider",
     "support": {
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "SolutionForest\\FilamentTimeRangeSlider\\": "src/",
-            "SolutionForest\\FilamentTimeRangeSlider\\Database\\Factories\\": "database/factories/"
+            "SolutionForest\\TimeRangeSlider\\": "src/",
+            "SolutionForest\\TimeRangeSlider\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SolutionForest\\FilamentTimeRangeSlider\\Tests\\": "tests/"
+            "SolutionForest\\TimeRangeSlider\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -60,10 +60,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SolutionForest\\FilamentTimeRangeSlider\\FilamentTimeRangeSliderServiceProvider"
+                "SolutionForest\\TimeRangeSlider\\TimeRangeSliderServiceProvider"
             ],
             "aliases": {
-                "FilamentTimeRangeSlider": "SolutionForest\\FilamentTimeRangeSlider\\Facades\\FilamentTimeRangeSlider"
+                "TimeRangeSlider": "SolutionForest\\TimeRangeSlider\\Facades\\TimeRangeSlider"
             }
         }
     },

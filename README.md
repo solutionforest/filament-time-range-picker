@@ -1,9 +1,9 @@
-# This is my package filament-time-range-slider
+# This is my package time-range-slider
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/solutionforest/filament-time-range-slider.svg?style=flat-square)](https://packagist.org/packages/solutionforest/filament-time-range-slider)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/solutionforest/filament-time-range-slider/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/solutionforest/filament-time-range-slider/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/solutionforest/filament-time-range-slider/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/solutionforest/filament-time-range-slider/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/solutionforest/filament-time-range-slider.svg?style=flat-square)](https://packagist.org/packages/solutionforest/filament-time-range-slider)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/solutionforest/time-range-slider.svg?style=flat-square)](https://packagist.org/packages/solutionforest/time-range-slider)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/solutionforest/time-range-slider/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/solutionforest/time-range-slider/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/solutionforest/time-range-slider/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/solutionforest/time-range-slider/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/solutionforest/time-range-slider.svg?style=flat-square)](https://packagist.org/packages/solutionforest/time-range-slider)
 
 
 
@@ -14,26 +14,26 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require solutionforest/filament-time-range-slider
+composer require solutionforest/time-range-slider
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="filament-time-range-slider-migrations"
+php artisan vendor:publish --tag="time-range-slider-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="filament-time-range-slider-config"
+php artisan vendor:publish --tag="time-range-slider-config"
 ```
 
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="filament-time-range-slider-views"
+php artisan vendor:publish --tag="time-range-slider-views"
 ```
 
 This is the contents of the published config file:
@@ -46,8 +46,8 @@ return [
 ## Usage
 
 ```php
-$filamentTimeRangeSlider = new SolutionForest\FilamentTimeRangeSlider();
-echo $filamentTimeRangeSlider->echoPhrase('Hello, SolutionForest!');
+$timeRangeSlider = new SolutionForest\TimeRangeSlider();
+echo $timeRangeSlider->echoPhrase('Hello, SolutionForest!');
 ```
 
 ## Testing

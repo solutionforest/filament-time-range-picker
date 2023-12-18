@@ -6,9 +6,9 @@
 
     <div class="flex justify-center items-center time-range-slider-container">
         <div wire:ignore ax-load x-ignore
-            ax-load-css="{{ \Filament\Support\Facades\FilamentAsset::getStyleHref('filament-time-range-slider-styles', 'solution-forest/filament-time-range-slider') }}"
-            ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-time-range-slider', 'solution-forest/filament-time-range-slider') }}"
-            x-data="filamentTimeRangeSlider({
+            ax-load-css="{{ \Filament\Support\Facades\FilamentAsset::getStyleHref('time-range-slider-styles', 'solution-forest/filament-time-range-slider') }}"
+            ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('time-range-slider', 'solution-forest/filament-time-range-slider') }}"
+            x-data="timeRangeSlider({
                 state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$statePath}')") }},
                 mininterval: {{ $getMinInterval() }},
                 stepinterval: {{ $getMinutesStep() }},

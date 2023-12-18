@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionForest\FilamentTimeRangeSlider\Database\Factories;
+namespace SolutionForest\TimeRangeSlider\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

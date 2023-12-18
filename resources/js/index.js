@@ -1,4 +1,4 @@
-export default function filamentTimeRangeSlider({ state, min, max, mininterval, stepinterval }) {
+export default function timeRangeSlider({ state, min, max, mininterval, stepinterval }) {
     return {
         state,
         minhour: 0,

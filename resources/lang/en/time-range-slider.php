@@ -1,6 +1,6 @@
 <?php
 
-// translations for SolutionForest/FilamentTimeRangeSlider
+// translations for SolutionForest/TimeRangeSlider
 return [
     //
 ];
