@@ -35,8 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SolutionForest\\TimeRangeSlider\\": "src/",
-            "SolutionForest\\TimeRangeSlider\\Database\\Factories\\": "database/factories/"
+            "SolutionForest\\TimeRangeSlider\\": "src/"
         }
     },
     "autoload-dev": {
@@ -61,10 +60,7 @@
         "laravel": {
             "providers": [
                 "SolutionForest\\TimeRangeSlider\\TimeRangeSliderServiceProvider"
-            ],
-            "aliases": {
-                "TimeRangeSlider": "SolutionForest\\TimeRangeSlider\\Facades\\TimeRangeSlider"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
