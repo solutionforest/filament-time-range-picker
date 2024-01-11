@@ -1,14 +1,12 @@
-@import '../../vendor/filament/forms/dist/index.css';
-
-input[type=range]::-webkit-slider-thumb {
+.time-range-slider-container input[type=range]::-webkit-slider-thumb {
     pointer-events: all;
     width: 20px;
     height: 20px;
     -webkit-appearance: none;
 }
 
-.time-component::-webkit-outer-spin-button,
-.time-component::-webkit-inner-spin-button {
+.time-range-slider-container .time-component::-webkit-outer-spin-button,
+.time-range-slider-container .time-component::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }

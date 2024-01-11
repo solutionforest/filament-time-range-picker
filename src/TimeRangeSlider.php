@@ -26,6 +26,8 @@ class TimeRangeSlider extends Field implements HasAffixActions
 
     public bool $disableInput = false;
 
+    public bool $dropdown = false;
+
     protected int|Closure|null $minutesStep = null;
 
     protected int|Closure|null $minInterval = null;
@@ -58,6 +60,13 @@ class TimeRangeSlider extends Field implements HasAffixActions
     public function disableInput(bool $disableInput = true): static
     {
         $this->disableInput = $disableInput;
+
+        return $this;
+    }
+
+    public function dropdown(bool $dropdown = true): static
+    {
+        $this->dropdown = $dropdown;
 
         return $this;
     }
