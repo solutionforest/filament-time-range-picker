@@ -59,6 +59,13 @@ export default function timeRangeSlider({ state, min, max, mininterval, stepinte
                 end: this.maxhour + ':' + this.maxminute
             };
         },
+
+        reset() {
+            mindate = 0;
+            maxdate = 1440;
+            this.mintrigger();
+            this.maxtrigger();
+        }
     }
 
 }
