@@ -61,8 +61,8 @@ export default function timeRangeSlider({ state, min, max, mininterval, stepinte
         },
 
         reset() {
-            mindate = 0;
-            maxdate = 1440;
+            this.mindate = 0;
+            this.maxdate = 1440;
             this.mintrigger();
             this.maxtrigger();
         }
