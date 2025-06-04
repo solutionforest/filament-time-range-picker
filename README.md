@@ -14,7 +14,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require solutionforest/time-range-slider
+composer require solution-forest/filament-time-range-slider
 ```
 
 You can publish the views using
