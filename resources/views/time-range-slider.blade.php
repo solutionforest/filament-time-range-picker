@@ -4,9 +4,10 @@
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
 
-    <div wire:ignore ax-load x-ignore
-        ax-load-css="{{ \Filament\Support\Facades\FilamentAsset::getStyleHref('time-range-slider-styles', 'solution-forest/filament-time-range-slider') }}"
-        ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('time-range-slider', 'solution-forest/filament-time-range-slider') }}"
+    <div wire:ignore
+        x-load
+        x-ignore
+        x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('time-range-slider', 'solution-forest/filament-time-range-slider') }}"
         x-on:reset-state.window="reset()"
         x-data="timeRangeSlider({
             state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$statePath}')") }},
@@ -96,14 +97,6 @@
                         </div>
                     </x-filament::input.wrapper>
                 </div>
-                {{-- <div>
-                        <x-input type="text" maxlength="5" x-on:change="mintrigger" x-model="mindate"
-                            class="w-full max-w-sm border border-gray-200 rounded text-center focus:border-primary-500 focus:ring-primary-500" />
-                    </div> --}}
-                {{-- <div>
-                        <x-input type="text" maxlength="5" x-on:change="maxtrigger" x-model="maxdate"
-                            class="w-full max-w-sm border border-gray-200 rounded text-center focus:border-primary-500 focus:ring-primary-500" />
-                    </div> --}}
             </div>
         @endif
 
